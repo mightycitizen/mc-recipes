@@ -1,0 +1,15 @@
+{
+  "name": "mightycitizen/mc-content",
+  "description": "Configures basic content types and paragraphs for a Drupal site.",
+  "type": "drupal-recipe",
+  "version": "1.0.0",
+  "repositories": [
+      {
+          "type": "path",
+          "url": "../*"
+      }
+  ],
+  "require": {
+      "mightycitizen/mc-media": "*"
+  }
+}

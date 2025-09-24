@@ -1,0 +1,14 @@
+name: 'MC Navigation'
+description: "Provides several navigation options, global settings, and custom blocks for a Drupal site."
+
+install:
+  - address
+  - config_pages
+  - menu_item_extras
+  - menu_ui
+  - ui_icons_field
+  - ui_icons_library
+  - ui_icons_picker
+
+config:
+  strict: false

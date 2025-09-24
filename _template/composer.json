@@ -1,0 +1,14 @@
+{
+  "name": "drupal_recipe/example_recipe",
+  "description": "An example Drupal recipe description",
+  "type": "drupal-recipe",
+  "require": {
+    "drupal/core": "^9.3",
+    "drupal/easy_breadcrumb": "^2.0.1",
+    "drupal-recipe/editorial_ui_for_publishers": "^1.0"
+  },
+  "suggest": {
+    "drupal-recipe/moderated_content_for_publishers": "Allows more advanced moderation of content"
+  },
+  "license": "GPL-2.0-or-later"
+}

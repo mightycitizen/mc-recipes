@@ -1,0 +1,159 @@
+# A human-readable name of the Recipe for listing in UIs.
+name: 'Example recipe'
+description: "An example Drupal recipe description"
+# The type key is similar to the package key in module.info.yml. It
+# can be used by the UI to group Drupal recipes. Additionally,
+# the type 'Site' means that the Drupal recipe will be listed in
+# the installer.
+type: 'Content type'
+
+recipes:
+  # An array of recipe's to apply prior to applying this recipe. Contributed or
+  # custom recipes can apply Drupal core recipes by specifying the root-relative
+  # path to the recipe. If any of these recipes fail to be applied, this
+  # recipe will not be applied either.
+  - editorial_ui_for_publishers
+  - another_recipe
+  - core/recipes/article_comment
+
+install:
+  # An array of modules or themes to install, if they are not already.
+  # The system will detect if it is a theme or a module. During the
+  # install only simple configuration from the new modules is created.
+  # This allows the Drupal recipe control over the configuration.
+  - easy_breadcrumb
+  - node
+  - text
+
+input:
+  recipient:
+    # REQUIRED: This has to be the name of a data type known to Drupal's Typed
+    # Data system. It can only be a "primitive" data type, like `string`,
+    # `integer`, `float`, `boolean`, and a few others.
+
+    # It can't be anything "complex" like an array. When in doubt, `string` is
+    # usually a safe choice.
+    data_type: email
+
+    # REQUIRED: A brief description of this input, and what it is used for.
+    description: 'The email address that should receive submissions from the feedback form.'
+
+    # OPTIONAL: Validation constraints against which the user's input will be
+    # checked. These constraints are used in exactly the same way that they're
+    # used by config schema to validate config. This is an array of arrays,
+    # where the keys are the names of constraints, and the values are arrays of
+    # options to pass to that constraint. If the constraint takes no options,
+    # the array can be empty.
+    constraints:
+      NotBlank: []
+
+    # OPTIONAL: Anything under the form key will be used to build the form
+    # element for this input. If form is not present, the input will never be
+    # shown in a form at all. If it is present, it must be an array containing
+    # only [form element properties](https://www.drupal.org/docs/drupal-apis/form-api/form-render-elements#s-list-of-form-and-render-elements)
+    # (i.e., every key must begin with #). It cannot contain any child elements.
+    form:
+      '#type': email
+      '#title': 'Feedback form email address'
+
+    # OPTIONAL: How to prompt the user at the command line. You can omit this
+    # entire section if you don't want to prompt the user for this input at all.
+    prompt:
+
+      # REQUIRED: Has to be the name of a method in
+      # \Symfony\Component\Console\Style\StyleInterface that accept user input.
+      # There are currently only `ask`, `askHidden`, `choice`, and `confirm`.
+      method: ask
+
+      # OPTIONAL-ISH: Arguments to pass to the method, keyed by argument name.
+      # Any required arguments have to be in here.
+      arguments:
+        # StyleInterface::ask() has a required $question argument, the question
+        # to ask the user at the command line.
+        question: 'What email address should receive website feedback?'
+
+    # REQUIRED: What should the default value be if the user could not be asked
+    # for input? For example, if the `drupal recipe` command is running in
+    # non-interactive mode.
+    default:
+      # REQUIRED: Where the default should come from: can be `config` or `value`.
+      source: config
+
+      # REQUIRED if `source` === `config`:
+      # a two-element indexed array with the name of a config object, and a
+      # property of that object, in that order. The config object must exist, or
+      # this will throw an exception.
+      config: ['system.site', 'mail']
+
+      # REQUIRED if `source` === `value`: a value to use as the default. Can be
+      # anything, as long as it conforms to the data type and validation
+      # constraints.
+      value: 'mail@example.com'
+
+  # This 'input' token can now be used later in the `config:actions` section.
+  # config:
+  #   actions:
+  #     contact.form.feedback:
+  #       setRecipients:
+  #         - ${recipient}
+
+extra:
+  # The key should be a valid project name. We don't validate that it exists, only that it
+  # *could* exist (i.e., doesn't contain "-", or "*", etc.)
+  project_browser:
+    # Some arbitrary stuff here
+  another_module:
+    # More other arbitrary stuff here
+
+config:
+  # A Drupal recipe can have a config directory. All configuration
+  # is this directory will be imported after the modules have been
+  # installed.
+
+  # Additionally, the Drupal recipe can install configuration entities
+  # provided by the modules it configures. This allows them to not have
+  # to maintain or copy this configuration. Note the examples below are
+  # fictitious.
+  import:
+    easy_breadcrumb:
+      - views.view.easy_breadcrumbs
+    node:
+      - node.type.article
+    # Import all configuration that is provided by the text module and any
+    # optional configuration that depends on the text module that is provided by
+    # modules already installed.
+    text: *
+
+  # The recipe system compares configuration from your recipe and the modules
+  # you bring in against your site's active configuration. By default it
+  # requires that they be identical in every detail, or it throws an error.
+  # strict: true
+
+  # You can set this to false to have the recipe runner skip the config import
+  # if it finds anything different.
+  # strict: false
+
+  # A recipe can choose to opt only certain config into the strict checking. If
+  # you specify individual config files to be treated strictly, then all others
+  # will be treated lenient.
+  # strict:
+  #   - field.storage.field_oysters
+  #   - field.storage.field_quahogs
+  strict: false
+
+  # Configuration actions may be defined. The structure here should be
+  # configuration entity ID, action, and then action arguments. Below the user
+  # role entity type with an ID of editor is being created if it does not exist
+  # and then has permissions added. The permissions key will be mapped to the
+  # \Drupal\user\Entity\Role::grantPermission() method.
+  actions:
+    user.role.editor:
+      createIfNotExists:
+        label: 'Editor'
+      grantPermissions:
+        - 'delete any article content'
+        - 'edit any article content'
+
+content:
+# A Drupal recipe can have a content directory. All content in this directory
+# will be created after the configuration is installed.

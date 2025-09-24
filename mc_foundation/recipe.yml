@@ -1,0 +1,8 @@
+name: 'MC Foundational Build'
+description: "A recipe for kickstarting common content types and features."
+type: 'Site'
+
+recipes:
+  - mc_base
+  - mc_content
+  - mc_navigation
