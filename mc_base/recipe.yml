@@ -1,0 +1,73 @@
+name: 'MC Base'
+description: "A recipe for kickstarting a new Drupal 11 project."
+type: 'Site'
+
+install:
+# Core
+  - config
+  - node
+  - user
+  - text
+  - link
+  - filter
+  - block
+  - block_content
+  - ckeditor5
+  - help
+#   - contextual
+  - menu_link_content
+#   - datetime
+#   - editor
+#   - image
+  - menu_ui
+  - options
+#   - path
+#   - dynamic_page_cache
+#   - big_pipe
+  - taxonomy
+  - dblog
+#   - toolbar
+#   - field_ui
+#   - media
+#   - media_library
+  - views
+  - views_ui
+#   - automated_cron
+#   - claro
+
+# Contrib
+  - config_pages
+  - field_group
+  - nomarkup
+  - pathauto
+  - webform
+
+# Theming
+  - components
+  - graphql
+  - graphql_compose
+  - graphql_twig
+  - twig_tweak
+
+# Themes
+  - admin_toolbar
+  - admin_toolbar_tools
+  - gin
+  - gin_login
+  - gin_toolbar
+  - gin_type_tray
+
+# Custom
+  - mc_custom
+  - mc_theme
+
+config:
+  strict: false
+  actions:
+    system.theme:
+      simple_config_update:
+        admin: 'gin'
+        default: 'mc_theme'
+    graphql_twig.settings:
+      simple_config_update:
+        graphql_server_id: 'graphql_compose_server'

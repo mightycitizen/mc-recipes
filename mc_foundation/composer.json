@@ -1,0 +1,15 @@
+{
+  "name": "mightycitizen/mc-foundation",
+  "description": "Base configuration for a Drupal 11 project.",
+  "type": "drupal-recipe",
+  "version": "1.0.0",
+  "repositories": [
+      {
+          "type": "path",
+          "url": "./recipes/custom/*"
+      }
+  ],
+  "require": {
+      "mightycitizen/mc-base": "*"
+  }
+}

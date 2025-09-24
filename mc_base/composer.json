@@ -1,0 +1,6 @@
+{
+    "name": "mightycitizen/mc-base",
+    "description": "Provides standard modules and configuration for a new Drupal project.",
+    "type": "drupal-recipe",
+    "version": "1.0.0"
+}

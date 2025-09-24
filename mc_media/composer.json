@@ -1,0 +1,15 @@
+{
+  "name": "mightycitizen/mc-media",
+  "description": "Configures media types for a Drupal site.",
+  "type": "drupal-recipe",
+  "version": "1.0.0",
+  "repositories": [
+      {
+          "type": "path",
+          "url": "./recipes/custom/*"
+      }
+  ],
+  "require": {
+    "drupal/focal_point": "^2.1"
+  }
+}

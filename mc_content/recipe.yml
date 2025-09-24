@@ -1,0 +1,28 @@
+name: 'MC Content'
+description: "A recipe for configuring media on a Drupal site."
+type: 'Content'
+
+recipes:
+  - mc_media
+
+install:
+  - address
+  - better_exposed_filters
+  - custom_field
+  - field_widget_add_more
+  - inline_entity_form
+  - maxlength
+  - nomarkup
+  - office_hours
+  - paragraphs
+  - paragraphs_ee
+  - paragraphs_features
+  - paragraphs_library
+  - taxonomy
+  - telephone
+  - ui_icons_field
+  - ui_icons_library
+  - ui_icons_picker
+
+config:
+  strict: false
