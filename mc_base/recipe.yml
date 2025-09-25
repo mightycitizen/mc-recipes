@@ -59,6 +59,7 @@ install:
 
 # Custom
   - mc_custom
+  - mc_icons
   - mc_theme
 
 config:

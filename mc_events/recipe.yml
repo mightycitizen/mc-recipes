@@ -1,0 +1,14 @@
+name: 'MC Events'
+description: "Provides a basic content model for events."
+
+recipes:
+  - mc_locations
+
+install:
+  - address
+  - better_exposed_filters
+  - smart_date
+  - smart_date_recur
+
+config:
+  strict: false

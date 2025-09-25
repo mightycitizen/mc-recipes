@@ -1,0 +1,7 @@
+name: 'MC Higher Ed Build'
+description: "A recipe for kickstarting common content types and features, tailored towards higher education institutes."
+type: 'Site'
+
+recipes:
+  - mc_foundation
+  - mc_programs

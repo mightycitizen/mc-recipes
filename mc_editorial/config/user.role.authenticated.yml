@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.text_links
+    - filter.format.webform_default
+    - filter.format.wysiwyg
+  module:
+    - filter
+    - media
+    - sitewide_alert
+    - system
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false

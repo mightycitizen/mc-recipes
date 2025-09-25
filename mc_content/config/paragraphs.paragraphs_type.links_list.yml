@@ -3,9 +3,12 @@ status: true
 dependencies:
   module:
     - paragraphs_ee
+    - paragraphs_library
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories: {  }
+  paragraphs_library:
+    allow_library_conversion: true
 id: links_list
 label: 'Links List'
 icon_uuid: null

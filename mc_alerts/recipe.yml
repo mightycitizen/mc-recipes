@@ -1,0 +1,14 @@
+name: 'MC Alerts'
+description: "Provides sitewide alert functionality for a Drupal site."
+
+install:
+  - config_pages
+  - pathauto
+  - sitewide_alert
+  - sitewide_alert_block
+  - mc_alerts
+  - nomarkup
+  - ui_icons_field
+
+config:
+  strict: false

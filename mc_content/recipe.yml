@@ -3,6 +3,7 @@ description: "A recipe for configuring media on a Drupal site."
 type: 'Content'
 
 recipes:
+  - mc_editorial
   - mc_media
 
 install:

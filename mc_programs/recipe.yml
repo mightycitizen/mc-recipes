@@ -1,0 +1,8 @@
+name: 'MC Programs'
+description: "Provides a content model for educational programs and campuses."
+
+recipes:
+  - mc_directory
+
+config:
+  strict: false

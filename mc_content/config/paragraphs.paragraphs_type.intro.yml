@@ -3,10 +3,13 @@ status: true
 dependencies:
   module:
     - paragraphs_ee
+    - paragraphs_library
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       subcomponents: subcomponents
+  paragraphs_library:
+    allow_library_conversion: true
 id: intro
 label: Intro
 icon_uuid: null

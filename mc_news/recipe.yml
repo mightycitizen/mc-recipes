@@ -1,0 +1,12 @@
+name: 'MC News'
+description: "Provides a basic content model for news articles."
+
+recipes:
+  - mc_directory
+
+install:
+  - address
+  - better_exposed_filters
+
+config:
+  strict: false

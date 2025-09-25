@@ -3,9 +3,12 @@ status: true
 dependencies:
   module:
     - paragraphs_ee
+    - paragraphs_library
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories: {  }
+  paragraphs_library:
+    allow_library_conversion: true
 id: content_grid
 label: 'Content Grid'
 icon_uuid: null

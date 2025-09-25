@@ -1,0 +1,12 @@
+name: 'MC Locations'
+description: "Provides a location content type for a Drupal site."
+
+install:
+  - address
+  - custom_field
+  - office_hours
+  - schemadotorg
+  - taxonomy
+
+config:
+  strict: false

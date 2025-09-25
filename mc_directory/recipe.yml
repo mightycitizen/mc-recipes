@@ -1,0 +1,16 @@
+name: 'MC Directory'
+description: "Provides a content model for directory functionality, including people and organizations."
+
+recipes:
+  - mc_locations
+
+install:
+  - address
+  - better_exposed_filters
+  - custom_field
+  - mc_directory
+  - schemadotorg
+  - term_reference_tree
+
+config:
+  strict: false

@@ -1,0 +1,9 @@
+name: 'MC Editorial'
+description: "A recipe containing basic settings for users, workflow, and text configuration."
+type: 'Site'
+
+install:
+  - linkit
+
+config:
+  strict: false

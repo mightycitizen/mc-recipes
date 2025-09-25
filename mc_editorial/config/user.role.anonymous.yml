@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.text_links
+  module:
+    - filter
+    - media
+    - sitewide_alert
+    - system
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
