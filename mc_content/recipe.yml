@@ -10,8 +10,11 @@ install:
   - address
   - better_exposed_filters
   - custom_field
+  - entity_reference_revisions
+  - entity_usage
   - field_widget_add_more
   - inline_entity_form
+  - layout_builder
   - maxlength
   - nomarkup
   - office_hours
@@ -19,6 +22,17 @@ install:
   - paragraphs_ee
   - paragraphs_features
   - paragraphs_library
+  - schemadotorg
+  - schemadotorg_address
+  - schemadotorg_custom_field
+  - schemadotorg_jsonld
+  - schemadotorg_node
+  - schemadotorg_office_hours
+  - schemadotorg_smart_date
+  - selective_better_exposed_filters
+  - smart_date
+  - smart_date_recur
+  - term_reference_tree
   - taxonomy
   - telephone
   - ui_icons_field
