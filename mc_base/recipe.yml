@@ -36,19 +36,22 @@ install:
   - config_ignore
   - config_pages
   - config_split
+  - custom_field
   - field_group
   - field_widget_add_more
   - maxlength
-  # - menu_block
+  - menu_block
   - nomarkup
   - pathauto
   - ui_icons
   - ui_icons_field
   - webform
+  - webform_ui
   - vite
 
 # Theming
   - components
+  - custom_field_graphql
   - graphql
   - graphql_compose
   - graphql_compose_image_style

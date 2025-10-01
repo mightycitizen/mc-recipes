@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: Sd_9jXBxw3mGn9d_y94jvlitI0wpvj6x2dQ0p6aGhJo
 entity_config:
   image_style:
     horizontal_16_9_lg:
@@ -26,6 +24,8 @@ entity_config:
       enabled: true
     thumbnail:
       enabled: false
+    vertical_3_4_md:
+      enabled: true
   media:
     audio:
       enabled: false
@@ -58,6 +58,8 @@ entity_config:
     author:
       enabled: true
       query_load_enabled: true
+    campus:
+      enabled: false
     event:
       enabled: true
       query_load_enabled: true
@@ -140,6 +142,9 @@ entity_config:
       enabled: true
       query_load_enabled: true
     statistics:
+      enabled: true
+      query_load_enabled: true
+    testimonial:
       enabled: true
       query_load_enabled: true
     wysiwyg:
@@ -408,6 +413,15 @@ field_config:
       field_paragraphs_8:
         enabled: true
         name_sdl: paragraphs
+    testimonial:
+      field_body:
+        enabled: true
+      field_label:
+        enabled: true
+      field_link:
+        enabled: true
+      field_media:
+        enabled: true
   taxonomy_term:
     contact_type:
       field_icon:

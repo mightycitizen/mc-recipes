@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: vertical_3_4_md
+label: 'Vertical 3:4 MD (375×500)'
+effects:
+  66fd114f-e112-4d00-b00f-89210fc3bb4c:
+    uuid: 66fd114f-e112-4d00-b00f-89210fc3bb4c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 375
+      height: 500
+      crop_type: focal_point

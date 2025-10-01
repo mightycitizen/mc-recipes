@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  type_tray:
+    type_category: directory
+    type_thumbnail: ''
+    type_icon: /modules/custom/mc_custom/modules/mc_icons/icons/phosphor/regular/bank.svg
+    type_description: ''
+    existing_nodes_link_text: ''
+    type_weight: 0
+name: Campus
+type: campus
+description: 'A distinct educational site or property, such as a main campus or satellite location.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -26,9 +26,12 @@ install:
   - schemadotorg_address
   - schemadotorg_custom_field
   - schemadotorg_jsonld
+  - schemadotorg_media
   - schemadotorg_node
   - schemadotorg_office_hours
+  - schemadotorg_paragraphs
   - schemadotorg_smart_date
+  - schemadotorg_taxonomy
   - selective_better_exposed_filters
   - smart_date
   - smart_date_recur

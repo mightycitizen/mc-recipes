@@ -1,9 +1,6 @@
-uuid: 158ef8c5-db40-4fb0-b62b-f3cca375d927
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: xS4lJthVTgF89HT831z3_bElyY_aA3Zr5UssqbDh7C0
 name: graphql_compose_server
 label: 'GraphQL Compose - Server'
 endpoint: /graphql

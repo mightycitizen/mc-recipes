@@ -21,6 +21,7 @@ dependencies:
     - paragraphs.paragraphs_type.programs_grid_manual
     - paragraphs.paragraphs_type.split_content
     - paragraphs.paragraphs_type.statistics
+    - paragraphs.paragraphs_type.testimonial
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -56,6 +57,7 @@ settings:
       news_grid_featured: news_grid_featured
       people_grid_manual: people_grid_manual
       programs_grid_manual: programs_grid_manual
+      testimonial: testimonial
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -129,6 +131,9 @@ settings:
         enabled: false
       statistics:
         weight: 9
+        enabled: true
+      testimonial:
+        weight: 51
         enabled: true
       wysiwyg:
         weight: 12
