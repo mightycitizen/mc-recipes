@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_table_of_contents
+    - node.type.page
+id: node.page.field_show_table_of_contents
+field_name: field_show_table_of_contents
+entity_type: node
+bundle: page
+label: 'Show table of contents above main'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

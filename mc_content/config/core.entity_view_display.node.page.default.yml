@@ -14,6 +14,8 @@ dependencies:
     - field.field.node.page.field_label
     - field.field.node.page.field_links_5
     - field.field.node.page.field_media
+    - field.field.node.page.field_show_menu_block
+    - field.field.node.page.field_show_table_of_contents
     - node.type.page
   module:
     - entity_reference_revisions
@@ -146,6 +148,26 @@ content:
       link: false
     third_party_settings: {  }
     weight: 112
+    region: content
+  field_show_menu_block:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 202
+    region: content
+  field_show_table_of_contents:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 203
     region: content
   links:
     settings: {  }

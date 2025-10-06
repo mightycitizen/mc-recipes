@@ -14,6 +14,8 @@ dependencies:
     - field.field.node.page.field_label
     - field.field.node.page.field_links_5
     - field.field.node.page.field_media
+    - field.field.node.page.field_show_menu_block
+    - field.field.node.page.field_show_table_of_contents
     - node.type.page
   module:
     - field_group
@@ -85,6 +87,8 @@ third_party_settings:
         required_fields: true
     group_main_content:
       children:
+        - field_show_menu_block
+        - field_show_table_of_contents
         - field_components_aside
         - field_components_primary
       label: 'Main Content'
@@ -195,7 +199,7 @@ content:
     third_party_settings: {  }
   field_components_aside:
     type: paragraphs
-    weight: 221
+    weight: 227
     region: content
     settings:
       title: Paragraph
@@ -227,7 +231,7 @@ content:
           sidebar_disabled: false
   field_components_primary:
     type: paragraphs
-    weight: 222
+    weight: 228
     region: content
     settings:
       title: Component
@@ -358,6 +362,20 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_show_menu_block:
+    type: boolean_checkbox
+    weight: 225
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_show_table_of_contents:
+    type: boolean_checkbox
+    weight: 226
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   path:
     type: path
