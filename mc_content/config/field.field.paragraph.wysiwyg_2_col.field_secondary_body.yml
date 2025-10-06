@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_secondary_body
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.wysiwyg_2_col
+  module:
+    - text
+id: paragraph.wysiwyg_2_col.field_secondary_body
+field_name: field_secondary_body
+entity_type: paragraph
+bundle: wysiwyg_2_col
+label: 'Secondary Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

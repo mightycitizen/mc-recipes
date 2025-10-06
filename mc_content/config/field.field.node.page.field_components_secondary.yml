@@ -24,6 +24,7 @@ dependencies:
     - paragraphs.paragraphs_type.statistics
     - paragraphs.paragraphs_type.testimonial
     - paragraphs.paragraphs_type.wysiwyg
+    - paragraphs.paragraphs_type.wysiwyg_2_col
   module:
     - entity_reference_revisions
 id: node.page.field_components_secondary
@@ -60,6 +61,7 @@ settings:
       people_grid_manual: people_grid_manual
       programs_grid_manual: programs_grid_manual
       testimonial: testimonial
+      wysiwyg_2_col: wysiwyg_2_col
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -139,5 +141,8 @@ settings:
         enabled: true
       wysiwyg:
         weight: 12
+        enabled: true
+      wysiwyg_2_col:
+        weight: 54
         enabled: true
 field_type: entity_reference_revisions

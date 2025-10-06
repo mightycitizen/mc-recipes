@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wysiwyg_2_col.field_body
+    - field.field.paragraph.wysiwyg_2_col.field_intro
+    - field.field.paragraph.wysiwyg_2_col.field_secondary_body
+    - paragraphs.paragraphs_type.wysiwyg_2_col
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.wysiwyg_2_col.default
+targetEntityType: paragraph
+bundle: wysiwyg_2_col
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_intro:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_secondary_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }
