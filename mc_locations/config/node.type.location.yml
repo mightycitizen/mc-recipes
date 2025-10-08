@@ -11,7 +11,7 @@ third_party_settings:
   type_tray:
     type_category: directory
     type_thumbnail: ''
-    type_icon: /modules/custom/mc_custom/modules/mc_icons/icons/phosphor/regular/buildings.svg
+    type_icon: /modules/contrib/mc_custom/modules/mc_icons/icons/phosphor/regular/buildings.svg
     type_description: ''
     existing_nodes_link_text: 'View existing <em class="placeholder">Location</em> content'
     type_weight: 0

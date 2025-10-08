@@ -35,6 +35,7 @@ install:
 # Contrib
   - config_ignore
   - config_pages
+  - config_readonly
   - config_split
   - custom_field
   - field_group

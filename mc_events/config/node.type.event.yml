@@ -11,7 +11,7 @@ third_party_settings:
   type_tray:
     type_category: general
     type_thumbnail: ''
-    type_icon: /modules/custom/mc_custom/modules/mc_icons/icons/phosphor/regular/calendar-star.svg
+    type_icon: /modules/contrib/mc_custom/modules/mc_icons/icons/phosphor/regular/calendar-star.svg
     type_description: ''
     existing_nodes_link_text: 'View existing <em class="placeholder">Event</em> content'
     type_weight: 0

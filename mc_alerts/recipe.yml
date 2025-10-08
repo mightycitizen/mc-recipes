@@ -12,3 +12,8 @@ install:
 
 config:
   strict: false
+  actions:
+    pathauto.settings:
+      simple_config_update:
+        enabled_entity_types:
+          - sitewide_alert

@@ -1,0 +1,6 @@
+categories:
+  general: 'General Content'
+  profiles: Profiles
+  directory: Directory
+fallback_label: Uncategorized
+text_format: plain_text
