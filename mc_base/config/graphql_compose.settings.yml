@@ -63,6 +63,9 @@ entity_config:
     event:
       enabled: true
       query_load_enabled: true
+    listing:
+      enabled: true
+      query_load_enabled: true
     location:
       enabled: true
       query_load_enabled: true
@@ -109,6 +112,8 @@ entity_config:
     cta_links:
       enabled: true
       query_load_enabled: true
+    drupal_view:
+      enabled: false
     events_grid:
       enabled: false
     form:
@@ -149,12 +154,14 @@ entity_config:
       query_load_enabled: true
     wysiwyg:
       enabled: false
+    wysiwyg_2_col:
+      enabled: false
   paragraphs_library_item:
     paragraphs_library_item:
       enabled: false
   taxonomy_term:
     audience:
-      enabled: false
+      enabled: true
     badge:
       enabled: false
     contact_type:
@@ -213,6 +220,8 @@ field_config:
     event:
       field_address:
         enabled: true
+      field_audiences:
+        enabled: true
       field_contact:
         enabled: true
       field_dates:
@@ -229,11 +238,30 @@ field_config:
         enabled: true
       field_room_number:
         enabled: true
+    listing:
+      body:
+        enabled: true
+      field_cta_primary:
+        enabled: true
+      field_cta_secondary:
+        enabled: true
+      field_heading:
+        enabled: true
+      field_image:
+        enabled: true
+      field_label:
+        enabled: true
+      field_links_5:
+        enabled: true
+      field_media:
+        enabled: true
     location:
       field_address:
         enabled: true
     news:
       field_author:
+        enabled: true
+      field_contact:
         enabled: true
       field_news_publications:
         enabled: true

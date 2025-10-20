@@ -21,7 +21,7 @@ content:
     weight: 6
     region: content
     settings:
-      size: 80
+      size: 60
       placeholder: ''
     third_party_settings:
       maxlength:
@@ -54,7 +54,7 @@ content:
     weight: 5
     region: content
     settings:
-      size: 80
+      size: 60
       placeholder: ''
     third_party_settings:
       maxlength:

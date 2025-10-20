@@ -5,6 +5,8 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_audiences
     - field.field.node.news.field_author
+    - field.field.node.news.field_contact
+    - field.field.node.news.field_date
     - field.field.node.news.field_image
     - field.field.node.news.field_news_publications
     - field.field.node.news.field_news_topics
@@ -12,6 +14,7 @@ dependencies:
     - field.field.node.news.field_subheading
     - node.type.news
   module:
+    - datetime
     - nomarkup
     - text
     - user
@@ -31,6 +34,23 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 0
+    region: content
+  field_contact:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_audiences: true

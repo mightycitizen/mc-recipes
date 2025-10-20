@@ -5,6 +5,8 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_audiences
     - field.field.node.news.field_author
+    - field.field.node.news.field_contact
+    - field.field.node.news.field_date
     - field.field.node.news.field_image
     - field.field.node.news.field_news_publications
     - field.field.node.news.field_news_topics
@@ -12,6 +14,7 @@ dependencies:
     - field.field.node.news.field_subheading
     - node.type.news
   module:
+    - datetime
     - field_group
     - inline_entity_form
     - maxlength
@@ -39,9 +42,9 @@ third_party_settings:
         width_breakpoint: 640
     group_page_content:
       children:
-        - field_author
-        - field_subheading
+        - field_date
         - field_image
+        - field_subheading
         - body
       label: 'Page Content'
       region: content
@@ -58,6 +61,8 @@ third_party_settings:
         required_fields: true
     group_info:
       children:
+        - field_author
+        - field_contact
         - field_organizations
         - field_news_publications
         - field_news_topics
@@ -82,7 +87,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 16
+    weight: 224
     region: content
     settings:
       rows: 9
@@ -104,7 +109,7 @@ content:
     third_party_settings: {  }
   field_audiences:
     type: term_reference_tree
-    weight: 7
+    weight: 18
     region: content
     settings:
       start_minimized: false
@@ -131,16 +136,32 @@ content:
       revision: true
       removed_reference: keep
     third_party_settings: {  }
+  field_contact:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 221
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 15
+    weight: 222
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_news_publications:
     type: term_reference_tree
-    weight: 5
+    weight: 16
     region: content
     settings:
       start_minimized: false
@@ -151,7 +172,7 @@ content:
     third_party_settings: {  }
   field_news_topics:
     type: term_reference_tree
-    weight: 6
+    weight: 17
     region: content
     settings:
       start_minimized: false
@@ -162,7 +183,7 @@ content:
     third_party_settings: {  }
   field_organizations:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 15
     region: content
     settings:
       match_operator: CONTAINS
@@ -172,7 +193,7 @@ content:
     third_party_settings: {  }
   field_subheading:
     type: string_textfield
-    weight: 14
+    weight: 223
     region: content
     settings:
       size: 60

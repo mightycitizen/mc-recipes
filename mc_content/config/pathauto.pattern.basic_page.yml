@@ -8,13 +8,14 @@ label: 'Basic Page'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  d8d86ef2-85e4-4f53-8b53-002ea22aa04e:
+  22e83abc-73db-40ea-b679-6f76e594b454:
     id: 'entity_bundle:node'
     negate: false
-    uuid: d8d86ef2-85e4-4f53-8b53-002ea22aa04e
+    uuid: 22e83abc-73db-40ea-b679-6f76e594b454
     context_mapping:
       node: node
     bundles:
+      listing: listing
       page: page
 selection_logic: and
 weight: -5

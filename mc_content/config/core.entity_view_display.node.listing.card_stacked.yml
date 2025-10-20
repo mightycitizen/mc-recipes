@@ -1,0 +1,80 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_stacked
+    - field.field.node.listing.body
+    - field.field.node.listing.field_components_primary
+    - field.field.node.listing.field_cta_primary
+    - field.field.node.listing.field_cta_secondary
+    - field.field.node.listing.field_heading
+    - field.field.node.listing.field_image
+    - field.field.node.listing.field_label
+    - field.field.node.listing.field_links_5
+    - field.field.node.listing.field_media
+    - node.type.listing
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+id: node.listing.card_stacked
+targetEntityType: node
+bundle: listing
+mode: card_stacked
+content:
+  field_components_primary:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_links_5:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_cta_primary: true
+  field_cta_secondary: true
+  field_image: true

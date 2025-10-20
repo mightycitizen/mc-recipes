@@ -41,6 +41,7 @@ install:
   - ui_icons_field
   - ui_icons_library
   - ui_icons_picker
+  - viewsreference
 
 config:
   strict: false

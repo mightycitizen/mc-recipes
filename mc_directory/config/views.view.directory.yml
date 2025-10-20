@@ -76,7 +76,7 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           pagination_heading_level: h4
@@ -86,6 +86,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -94,6 +96,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: bef
         options:
@@ -339,7 +342,7 @@ display:
       tags: {  }
   block_card:
     id: block_card
-    display_title: Block
+    display_title: 'Block - Card'
     display_plugin: block
     position: 2
     display_options:
@@ -513,6 +516,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -526,7 +530,7 @@ display:
       tags: {  }
   block_list:
     id: block_list
-    display_title: Block
+    display_title: 'Block - List'
     display_plugin: block
     position: 2
     display_options:
@@ -700,6 +704,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -717,6 +722,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: true
       defaults:
         header: false
       header:

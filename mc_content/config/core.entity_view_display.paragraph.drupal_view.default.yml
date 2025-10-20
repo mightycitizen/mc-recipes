@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drupal_view.field_intro
+    - field.field.paragraph.drupal_view.field_view
+    - paragraphs.paragraphs_type.drupal_view
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - viewsreference
+id: paragraph.drupal_view.default
+targetEntityType: paragraph
+bundle: drupal_view
+mode: default
+content:
+  field_intro:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        block: block
+        default: '0'
+        page: '0'
+        entity_reference: '0'
+        embed: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden: {  }
