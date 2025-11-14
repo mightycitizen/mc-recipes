@@ -54,9 +54,6 @@ settings:
       drupal_view:
         weight: 38
         enabled: false
-      events_grid:
-        weight: 39
-        enabled: false
       form:
         weight: 40
         enabled: false
@@ -72,24 +69,6 @@ settings:
       media:
         weight: 44
         enabled: false
-      news_grid:
-        weight: 45
-        enabled: false
-      news_grid_featured:
-        weight: 46
-        enabled: false
-      people_grid:
-        weight: 47
-        enabled: false
-      people_grid_manual:
-        weight: 48
-        enabled: false
-      programs_grid:
-        weight: 49
-        enabled: false
-      programs_grid_manual:
-        weight: 50
-        enabled: false
       split_content:
         weight: 51
         enabled: false
@@ -104,8 +83,5 @@ settings:
         enabled: false
       wysiwyg:
         weight: 55
-        enabled: false
-      wysiwyg_2_col:
-        weight: 56
         enabled: false
 field_type: entity_reference_revisions

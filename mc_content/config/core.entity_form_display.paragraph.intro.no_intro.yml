@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.paragraph.no_intro
+    - field.field.paragraph.intro.field_anchor_title
     - field.field.paragraph.intro.field_body
     - field.field.paragraph.intro.field_heading
     - field.field.paragraph.intro.field_icon
@@ -49,6 +50,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_anchor_title: true
   field_body: true
   field_icon: true
   field_label: true

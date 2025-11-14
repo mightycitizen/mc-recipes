@@ -154,8 +154,6 @@ entity_config:
       query_load_enabled: true
     wysiwyg:
       enabled: false
-    wysiwyg_2_col:
-      enabled: false
   paragraphs_library_item:
     paragraphs_library_item:
       enabled: false

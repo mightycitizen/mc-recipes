@@ -1,13 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  config:
-    - filter.format.text_links
-  module:
-    - filter
-    - media
-    - sitewide_alert
-    - system
+dependencies: {  }
 id: anonymous
 label: 'Anonymous user'
 weight: 0

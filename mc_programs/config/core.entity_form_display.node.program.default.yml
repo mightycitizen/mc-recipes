@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.program.field_college_school
     - field.field.node.program.field_components_hero
     - field.field.node.program.field_components_primary
+    - field.field.node.program.field_components_secondary
     - field.field.node.program.field_cta_primary
     - field.field.node.program.field_cta_secondary
     - field.field.node.program.field_heading
     - field.field.node.program.field_image
+    - field.field.node.program.field_links_2
     - field.field.node.program.field_locations
     - field.field.node.program.field_program_accelerated
     - field.field.node.program.field_program_completion_time
@@ -27,6 +29,7 @@ dependencies:
     - node.type.program
   module:
     - field_group
+    - field_widget_add_more
     - link
     - maxlength
     - media_library
@@ -112,6 +115,8 @@ third_party_settings:
       children:
         - group_program_details
         - field_components_primary
+        - field_links_2
+        - field_components_secondary
       label: 'Main Content'
       region: content
       parent_name: group_page_sections
@@ -197,7 +202,7 @@ content:
     third_party_settings: {  }
   field_college_school:
     type: options_buttons
-    weight: 26
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -265,6 +270,38 @@ content:
           dialog_style: tiles
           drag_drop: false
           sidebar_disabled: false
+  field_components_secondary:
+    type: paragraphs
+    weight: 11
+    region: content
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+        show_collapse_all: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+          drag_drop: false
+          sidebar_disabled: false
   field_cta_primary:
     type: link_default
     weight: 11
@@ -296,9 +333,23 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_links_2:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      field_widget_add_more:
+        add_more: true
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
   field_locations:
     type: entity_reference_autocomplete
-    weight: 32
+    weight: 16
     region: content
     settings:
       match_operator: CONTAINS
@@ -337,7 +388,7 @@ content:
     third_party_settings: {  }
   field_program_credential_types:
     type: term_reference_tree
-    weight: 28
+    weight: 12
     region: content
     settings:
       start_minimized: true
@@ -355,7 +406,7 @@ content:
     third_party_settings: {  }
   field_program_formats:
     type: term_reference_tree
-    weight: 30
+    weight: 14
     region: content
     settings:
       start_minimized: true
@@ -366,7 +417,7 @@ content:
     third_party_settings: {  }
   field_program_formats_info:
     type: text_textarea
-    weight: 31
+    weight: 15
     region: content
     settings:
       rows: 2
@@ -378,7 +429,7 @@ content:
         maxlength_js_enforce: false
   field_program_subject_areas:
     type: term_reference_tree
-    weight: 29
+    weight: 13
     region: content
     settings:
       start_minimized: true
@@ -389,7 +440,7 @@ content:
     third_party_settings: {  }
   field_program_types:
     type: term_reference_tree
-    weight: 27
+    weight: 11
     region: content
     settings:
       start_minimized: true
@@ -400,7 +451,7 @@ content:
     third_party_settings: {  }
   field_programs:
     type: entity_reference_autocomplete
-    weight: 33
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS
@@ -410,7 +461,7 @@ content:
     third_party_settings: {  }
   field_programs_label:
     type: string_textfield
-    weight: 34
+    weight: 18
     region: content
     settings:
       size: 60

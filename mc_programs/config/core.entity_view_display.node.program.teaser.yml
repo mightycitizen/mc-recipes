@@ -7,10 +7,12 @@ dependencies:
     - field.field.node.program.field_college_school
     - field.field.node.program.field_components_hero
     - field.field.node.program.field_components_primary
+    - field.field.node.program.field_components_secondary
     - field.field.node.program.field_cta_primary
     - field.field.node.program.field_cta_secondary
     - field.field.node.program.field_heading
     - field.field.node.program.field_image
+    - field.field.node.program.field_links_2
     - field.field.node.program.field_locations
     - field.field.node.program.field_program_accelerated
     - field.field.node.program.field_program_completion_time
@@ -64,9 +66,11 @@ hidden:
   field_college_school: true
   field_components_hero: true
   field_components_primary: true
+  field_components_secondary: true
   field_cta_primary: true
   field_cta_secondary: true
   field_heading: true
+  field_links_2: true
   field_locations: true
   field_program_accelerated: true
   field_program_completion_time: true

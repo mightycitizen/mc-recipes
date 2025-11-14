@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.card_stacked
     - field.field.node.program.body
     - field.field.node.program.field_college_school
     - field.field.node.program.field_components_hero
@@ -30,48 +30,31 @@ dependencies:
     - node.type.program
   module:
     - entity_reference_revisions
-    - layout_builder
-    - nomarkup
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
-id: node.program.full
+id: node.program.card_stacked
 targetEntityType: node
 bundle: program
-mode: full
+mode: card_stacked
 content:
-  field_components_primary:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: ''
-        referenced_entity: ''
-    weight: 0
-    region: content
   field_components_secondary:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
       view_mode: default
       link: ''
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: ''
-        referenced_entity: ''
+    third_party_settings: {  }
     weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   body: true
   field_college_school: true
   field_components_hero: true
+  field_components_primary: true
   field_cta_primary: true
   field_cta_secondary: true
   field_heading: true
@@ -91,4 +74,3 @@ hidden:
   field_programs: true
   field_programs_label: true
   field_subheading: true
-  links: true
